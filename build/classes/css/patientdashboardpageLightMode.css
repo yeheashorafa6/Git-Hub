@@ -1,0 +1,44 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 7, 2023, 10:47:55 AM
+    Author     : HP
+*/
+.parent{
+    -fx-background-color: #AFD3E2;
+}
+.sidePare{
+        -fx-background-color: #19A7CE;
+
+}
+.btnMode{
+       -fx-background-color: #AFD3E2;
+
+}
+.title{
+    -fx-text-fill:#19A7CE;
+}
+.welcome{
+  -fx-text-fill:white;
+}
+.btnShow{
+        -fx-background-color:#FF9F29;       
+}
+.btn{
+    -fx-text-fill:white;
+    -fx-font-size:15px;
+}
+.btnLogin{
+        -fx-background-color:#36AE7C;
+}
+.btnLogout{
+    -fx-background-color:#EB5353;
+}
+.txtText{
+    -fx-font-size:15px;
+        -fx-text-fill:white;
+
+}

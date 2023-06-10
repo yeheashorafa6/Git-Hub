@@ -1,0 +1,44 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.parent{
+    -fx-background-color: #526D82;
+}
+.sidePare{
+        -fx-background-color: #27374D;
+
+}
+.btn{
+    -fx-text-fill:white;
+    -fx-font-size:15px;
+}
+
+.btnShow{
+       /*-fx-background-color:#9DB2BF;*/ 
+       /*-fx-background-color:#537188;*/
+       -fx-background-color:#2B2A4C;
+}
+
+.btnLogin{
+         -fx-background-color:#9DB2BF;
+}
+.btnLogout{
+     -fx-background-color:#CD1818;;
+}
+.btnMode{
+        -fx-background-color: #526D82;
+
+}
+.title{
+    -fx-text-fill:#27374D;
+}
+
+.welcome{
+  -fx-text-fill:white;
+}
+.txtText{
+    -fx-font-size:15px;
+        -fx-text-fill:white;
+
+}

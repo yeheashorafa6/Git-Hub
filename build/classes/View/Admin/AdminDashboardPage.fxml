@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="parent" prefHeight="774.0" prefWidth="1379.0" styleClass="parent" stylesheets="@../../css/admindashboardPageLightMode.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdminDashboardPageController">
+   <children>
+      <AnchorPane layoutX="194.0" layoutY="62.0" prefHeight="684.0" prefWidth="1160.0" style="-fx-background-color: white; -fx-background-radius: 10px;" translateZ="-1.0">
+         <children>
+            <AnchorPane layoutX="13.0" layoutY="14.0" prefHeight="288.0" prefWidth="1135.0" style="-fx-background-color: #f3f3f3; -fx-background-radius: 10px;">
+               <children>
+                  <TableView fx:id="patientsTableView" layoutX="11.0" layoutY="44.0" prefHeight="219.0" prefWidth="769.0">
+                     <columns>
+                        <TableColumn fx:id="tvID" prefWidth="27.0" text="id" />
+                        <TableColumn fx:id="tvUserName" prefWidth="84.0" text="User Name" />
+                        <TableColumn fx:id="tvFirstName" prefWidth="88.0" text="First Name" />
+                        <TableColumn fx:id="tvLastName" prefWidth="85.0" text="Last Name" />
+                        <TableColumn fx:id="tvAge" prefWidth="43.0" text="Age" />
+                        <TableColumn fx:id="tvEmail" prefWidth="191.0" text="Email" />
+                        <TableColumn fx:id="tvPhone" prefWidth="95.0" text="Phone" />
+                        <TableColumn fx:id="tvGender" prefWidth="59.0" text="Gender" />
+                        <TableColumn fx:id="tvRole" prefWidth="52.0" text="Role" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="342.0" layoutY="14.0" prefHeight="21.0" prefWidth="107.0" text="Patients Table" textAlignment="CENTER" textFill="#0081c9">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnShowallRegisterdPatientsInTheSystem" layoutX="799.0" layoutY="129.0" mnemonicParsing="false" onAction="#ShowallRegisterdPatientsInTheSystem" prefHeight="36.0" prefWidth="325.0" stylesheets="@../../../../prog3_finalProject_v2/src/css/admindashboardpageLightMode.css" text="Show all Registerd Patients In System">
+                     <styleClass>
+                        <String fx:value="btnShow" />
+                        <String fx:value="btn" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnDelelte" layoutX="968.0" layoutY="226.0" mnemonicParsing="false" onAction="#deletePatient" prefHeight="36.0" prefWidth="156.0" stylesheets="@../../../../prog3_finalProject_v2/src/css/admindashboardpageLightMode.css" text="Delete patient ">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btnCancel" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnUpdataPatient" layoutX="799.0" layoutY="226.0" mnemonicParsing="false" onAction="#updatePatient" prefHeight="36.0" prefWidth="156.0" stylesheets="@../../../../prog3_finalProject_v2/src/css/admindashboardpageLightMode.css" text="Updata patient ">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btnUpdata" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnCreateNewPatient" layoutX="799.0" layoutY="178.0" mnemonicParsing="false" onAction="#createNewPatient" prefHeight="36.0" prefWidth="325.0" stylesheets="@../../../../prog3_finalProject_v2/src/css/admindashboardpageLightMode.css" text="Create new patient ">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btnCreate" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnSearchInPatients" layoutX="1018.0" layoutY="46.0" mnemonicParsing="false" onAction="#searchInPatients" prefHeight="36.0" prefWidth="107.0" stylesheets="@../../../../prog3_finalProject_v2/src/css/admindashboardpageLightMode.css" text="Search">
+                     <styleClass>
+                        <String fx:value="btnShow" />
+                        <String fx:value="btn" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="txtSearchInPatients" layoutX="799.0" layoutY="47.0" prefHeight="36.0" prefWidth="219.0" promptText="Enter Patient First_Name" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="13.0" layoutY="315.0" prefHeight="355.0" prefWidth="561.0" style="-fx-background-color: #f3f3f3; -fx-background-radius: 10px;">
+               <children>
+                  <Button fx:id="btnShowAllFreeAppointment" layoutX="104.0" layoutY="307.0" mnemonicParsing="false" onAction="#ShowAllFreeAppointment" prefHeight="34.0" prefWidth="354.0" stylesheets="@../../css/admindashboardpageLightMode.css" text="Show All Free Appointments ">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btnShow" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TableView fx:id="freeTableView" layoutX="11.0" layoutY="89.0" prefHeight="207.0" prefWidth="539.0">
+                     <columns>
+                        <TableColumn fx:id="idCol" prefWidth="35.0" text="ID" />
+                        <TableColumn fx:id="appDateCol" prefWidth="148.0" text="Appointment Date" />
+                        <TableColumn fx:id="appDayCol" prefWidth="140.0" text="Appointment Day" />
+                        <TableColumn fx:id="appTimeCol" prefWidth="144.0" text="Appointment Time" />
+                        <TableColumn fx:id="statusCol" minWidth="0.0" prefWidth="72.0" text="Status" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="btnCreateNewAppointment" layoutX="11.0" layoutY="41.0" mnemonicParsing="false" onAction="#createNewAppointment" prefHeight="36.0" prefWidth="170.0" stylesheets="@../../css/admindashboardpageLightMode.css" text="Creat new patient ">
+                     <styleClass>
+                        <String fx:value="btnCreate" />
+                        <String fx:value="btn" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnUpdateAppointment" layoutX="196.0" layoutY="44.0" mnemonicParsing="false" onAction="#updateAppointment" prefHeight="34.0" prefWidth="170.0" stylesheets="@../../css/admindashboardpageLightMode.css" text="Updata patient ">
+                     <styleClass>
+                        <String fx:value="btnUpdata" />
+                        <String fx:value="btn" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnDeleteAppointment" layoutX="380.0" layoutY="44.0" mnemonicParsing="false" onAction="#deleteAppointment" prefHeight="34.0" prefWidth="170.0" stylesheets="@../../css/admindashboardpageLightMode.css" text="Delete patient ">
+                     <styleClass>
+                        <String fx:value="btnCancel" />
+                        <String fx:value="btn" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label layoutX="190.0" layoutY="12.0" prefHeight="21.0" prefWidth="182.0" text="Free-Appointments Table" textAlignment="CENTER" textFill="#0081c9">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="587.0" layoutY="315.0" prefHeight="355.0" prefWidth="561.0" style="-fx-background-color: #f3f3f3; -fx-background-radius: 10px;">
+               <children>
+                  <Button fx:id="btnShowAllBookedAppointments" layoutX="11.0" layoutY="307.0" mnemonicParsing="false" onAction="#ShowAllBookedAppointments" prefHeight="34.0" prefWidth="269.0" stylesheets="@../../css/admindashboardpageLightMode.css" text="Show All Booked Appointments">
+                     <styleClass>
+                        <String fx:value="btnShow" />
+                        <String fx:value="btn" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="txtSearchinbookedappointments" layoutX="11.0" layoutY="44.0" prefHeight="34.0" prefWidth="332.0" promptText="Enter Your First Name" />
+                  <TableView fx:id="bookedTableView" layoutX="11.0" layoutY="89.0" prefHeight="207.0" prefWidth="539.0">
+                     <columns>
+                        <TableColumn fx:id="idBookedCol" prefWidth="38.0" text="ID" />
+                        <TableColumn fx:id="userIdCol" prefWidth="63.0" text="User_ID" />
+                        <TableColumn fx:id="appIdCol" prefWidth="134.0" text="Appointment_ID" />
+                        <TableColumn fx:id="statusBookedCol" prefWidth="72.0" text="Status" />
+                        <TableColumn fx:id="docCommentCol" minWidth="0.0" prefWidth="230.0" text="Doctor Comment" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="196.0" layoutY="14.0" prefHeight="21.0" prefWidth="206.0" text="Booked-Appointments Table" textAlignment="CENTER" textFill="#0081c9">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnLeaveComment" layoutX="412.0" layoutY="307.0" mnemonicParsing="false" onAction="#leaveCommentAndFinish" prefHeight="34.0" prefWidth="138.0" stylesheets="@../../css/admindashboardpageLightMode.css" text="leave a comment">
+                     <styleClass>
+                        <String fx:value="btnShow" />
+                        <String fx:value="btn" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnSearchInBookedAppointments" layoutX="343.0" layoutY="43.0" mnemonicParsing="false" onAction="#searchInBookedAppointments" prefHeight="33.0" prefWidth="206.0" stylesheets="@../../../../prog3_finalProject_v2/src/css/admindashboardpageLightMode.css" text="Search">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <styleClass>
+                        <String fx:value="btnShow" />
+                        <String fx:value="btn" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Label layoutX="668.0" layoutY="13.0" style="-fx-text-fill: white;" text="Admin Dashboard">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="774.0" prefWidth="170.0" styleClass="sidePare" stylesheets="@../../css/admindashboardPageLightMode.css">
+         <children>
+            <ImageView fitHeight="96.0" fitWidth="150.0" layoutX="37.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/admin.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="41.0" layoutY="195.0" prefHeight="30.0" prefWidth="88.0" styleClass="welcome" stylesheets="@../../css/admindashboardPageLightMode.css" text="Welcome " textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnLogout" layoutX="20.0" layoutY="630.0" mnemonicParsing="false" onAction="#logout" prefHeight="36.0" prefWidth="131.0" style="-fx-text-fill: white;" stylesheets="@../../css/admindashboardpageLightMode.css" text="logout">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="btnCancel" />
+                  <String fx:value="btn" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="16.0" layoutY="225.0" prefHeight="30.0" prefWidth="138.0" styleClass="welcome" text=" in Admin Page">
+               <font>
+                  <Font name="System Italic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow color="#00000037" height="50.0" radius="24.5" spread="0.4" width="50.0" />
+         </effect>
+      </AnchorPane>
+      <Label fx:id="mode" layoutX="1270.0" layoutY="20.0" text="Dark Mode">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgMode" fitHeight="50.0" fitWidth="50.0" layoutX="1208.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/dark.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnMode" layoutX="1208.0" layoutY="15.0" mnemonicParsing="false" onAction="#showBtnMode" prefHeight="31.0" prefWidth="50.0" style="-fx-background-color: transparent;" styleClass="btnMode">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+   </children>
+</AnchorPane>

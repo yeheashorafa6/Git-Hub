@@ -1,0 +1,48 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.parent{
+    -fx-background-color: #AFD3E2;
+}
+.sidePare{
+        -fx-background-color: #19A7CE;
+
+}
+
+.btn{
+    -fx-text-fill:white;
+    -fx-font-size:15px;
+}
+
+.btnsearch{
+    -fx-background-color:#BFDB38;
+}
+.btnCancel{
+    -fx-background-color:#EB5353;
+}
+.btnUpdata{
+        -fx-background-color:#187498;
+}
+.btnCreate{
+        -fx-background-color:#36AE7C;
+}
+
+.btnShow{
+        -fx-background-color:#FF9F29;       
+}
+.btnMode{
+       -fx-background-color: #AFD3E2;
+
+}
+.title{
+    -fx-text-fill:#19A7CE;
+}
+.welcome{
+  -fx-text-fill:white;
+}
+
+

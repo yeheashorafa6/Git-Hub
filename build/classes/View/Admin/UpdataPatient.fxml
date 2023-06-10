@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxWidth="0.0" prefHeight="570.0" prefWidth="700.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UpdataPatientController">
+    <stylesheets>
+        <URL value="@/css/updatapatient.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="599.0" prefWidth="505.0" style="-fx-background-color: #fff;">
+         <children>
+            <Label layoutX="79.0" layoutY="101.0" prefHeight="27.0" prefWidth="95.0" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Username ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="146.0" prefHeight="27.0" prefWidth="95.0" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Password">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="79.0" layoutY="191.0" prefHeight="27.0" prefWidth="95.0" stylesheets="@../../css/PatientRegisterPagestyle.css" text="First Name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="79.0" layoutY="236.0" prefHeight="27.0" prefWidth="95.0" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Last Name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="79.0" layoutY="281.0" prefHeight="27.0" prefWidth="95.0" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Age">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="454.0" prefHeight="27.0" prefWidth="95.0" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Role">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="79.0" layoutY="326.0" prefHeight="27.0" prefWidth="95.0" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Email">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="419.0" prefHeight="27.0" prefWidth="95.0" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Gender">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFirstName" layoutX="213.0" layoutY="189.0" prefHeight="31.0" prefWidth="214.0" promptText="Enter Your First Name" />
+            <TextField fx:id="txtLastName" layoutX="213.0" layoutY="234.0" prefHeight="31.0" prefWidth="214.0" promptText="Enter Your Last Name" />
+            <TextField fx:id="txtAge" layoutX="213.0" layoutY="279.0" prefHeight="31.0" prefWidth="214.0" promptText="Enter Your Age" />
+            <TextField fx:id="txtEmail" layoutX="213.0" layoutY="324.0" prefHeight="31.0" prefWidth="214.0" promptText="Enter Your Email" />
+            <TextField fx:id="txtPassword" layoutX="213.0" layoutY="144.0" prefHeight="31.0" prefWidth="214.0" promptText="Enter Your Password" />
+            <TextField fx:id="txtUserName" layoutX="213.0" layoutY="99.0" prefHeight="31.0" prefWidth="214.0" promptText="Enter Your User Name" />
+            <Label layoutX="89.0" layoutY="32.0" styleClass="labelryi" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Update Patient Information">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnConfirmEdits" layoutX="80.0" layoutY="520.0" mnemonicParsing="false" onAction="#confirmEdits" prefHeight="36.0" prefWidth="153.0" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Confirm Edits">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <RadioButton fx:id="radioMale" layoutX="218.0" layoutY="422.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="67.0" selected="true" styleClass="label" stylesheets="@../../css/PatientRegisterPagestyle.css" text="male">
+               <toggleGroup>
+                  <ToggleGroup fx:id="groupGender" />
+               </toggleGroup>
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+            <RadioButton fx:id="radioFemale" layoutX="336.0" layoutY="422.0" mnemonicParsing="false" styleClass="label" stylesheets="@../../css/PatientRegisterPagestyle.css" text="female" toggleGroup="$groupGender">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+            <RadioButton fx:id="radioAdmail" layoutX="218.0" layoutY="457.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="75.0" selected="true" styleClass="label" stylesheets="@../../css/PatientRegisterPagestyle.css" text="admin">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="groupRole" />
+               </toggleGroup>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+            <RadioButton fx:id="radioPatient" layoutX="336.0" layoutY="457.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="75.0" styleClass="label" stylesheets="@../../css/PatientRegisterPagestyle.css" text="patient" toggleGroup="$groupRole">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+            <Label layoutX="79.0" layoutY="371.0" prefHeight="27.0" prefWidth="95.0" stylesheets="@../../css/PatientRegisterPagestyle.css" text="Phone">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPhone" layoutX="213.0" layoutY="369.0" prefHeight="31.0" prefWidth="214.0" promptText="Enter Your Phone" />
+            <Button fx:id="btnCancel" layoutX="312.0" layoutY="520.0" mnemonicParsing="false" onAction="#cancelUpdate" prefHeight="36.0" prefWidth="114.0" style="-fx-background-color: EB5353;" text="Cancel" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
