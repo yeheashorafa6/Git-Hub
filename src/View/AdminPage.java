@@ -18,7 +18,7 @@ import javafx.stage.Stage;
 public class AdminPage extends Stage {
 
     private Scene adminLoginPageScene;
-    private Scene adminDachboardPageScene;
+    public static Scene adminDachboardPageScene;
 
     public AdminPage() throws IOException {
 
